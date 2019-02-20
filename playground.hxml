@@ -1,0 +1,9 @@
+-cp tests
+-js bin/playground/index.js
+-main Playground
+-dce full
+
+-lib haxe-loader
+-lib semantic-ui-react
+
+-D analyzer-optimize
