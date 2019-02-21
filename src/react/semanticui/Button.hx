@@ -3,7 +3,6 @@ package react.semanticui;
 import react.ReactComponent;
 import react.BaseProps;
 import tink.domspec.Attributes;
-import tink.domspec.Events;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
@@ -13,8 +12,8 @@ extern class Button extends ReactComponentOfProps<ButtonProps> {}
 typedef ButtonProps = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
-	// > ButtonAttr,
-	// > Events<js.html.ButtonElement>,
+	> ButtonAttr,
+	> ReactEvents<js.html.ButtonElement>,
 	
 	?active:Bool,
 	?animated:EitherType<Bool,String>,
@@ -33,7 +32,7 @@ typedef ButtonProps = {
 	?labelPosition:String,
 	?loading:Bool,
 	?negative:Bool,
-	?onClick:Function,
+	// ?onClick:Function,
 	?positive:Bool,
 	?primary:Bool,
 	?role:String,
