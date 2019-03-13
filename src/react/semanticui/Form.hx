@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import tink.domspec.Attributes;
 
-@:jsRequire('semantic-ui-react', 'Form')
+#if react_global @:native('semanticUIReact.Form')
+#else @:jsRequire('semantic-ui-react', 'Form')
+#end
 extern class Form extends ReactComponentOfProps<FormProps> {}
 
 typedef FormProps = {

@@ -6,7 +6,9 @@ import haxe.Constraints;
 import tink.domspec.Attributes;
 import tink.domspec.Events;
 
-@:jsRequire('semantic-ui-react', 'Modal.Actions')
+#if react_global @:native('semanticUIReact.Modal.Actions')
+#else @:jsRequire('semantic-ui-react', 'Modal.Actions')
+#end
 extern class ModalActions extends ReactComponentOfProps<ModalActionsProps> {}
 
 typedef ModalActionsProps = {

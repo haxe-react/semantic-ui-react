@@ -7,7 +7,9 @@ import haxe.extern.EitherType;
 import tink.domspec.Attributes;
 import tink.domspec.Events;
 
-@:jsRequire('semantic-ui-react', 'Image')
+#if react_global @:native('semanticUIReact.Image')
+#else @:jsRequire('semantic-ui-react', 'Image')
+#end
 extern class Image extends ReactComponentOfProps<ImageProps> {}
 
 typedef ImageProps = {

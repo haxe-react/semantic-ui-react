@@ -5,7 +5,9 @@ import react.BaseProps;
 import tink.domspec.Events;
 import tink.domspec.Attributes;
 
-@:jsRequire('semantic-ui-react', 'Form.Button')
+#if react_global @:native('semanticUIReact.Form.Button')
+#else @:jsRequire('semantic-ui-react', 'Form.Button')
+#end
 extern class FormButton extends ReactComponentOfProps<FormButtonProps> {}
 
 typedef FormButtonProps = {

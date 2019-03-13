@@ -3,7 +3,9 @@ package react.semanticui;
 import react.ReactComponent;
 import react.BaseProps;
 
-@:jsRequire('semantic-ui-react', 'Input')
+#if react_global @:native('semanticUIReact.Input')
+#else @:jsRequire('semantic-ui-react', 'Input')
+#end
 extern class Input extends ReactComponentOfProps<InputProps> {}
 
 typedef InputProps = {

@@ -6,7 +6,9 @@ import react.semanticui.DropdownItem;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
-@:jsRequire('semantic-ui-react', 'Dropdown')
+#if react_global @:native('semanticUIReact.Dropdown')
+#else @:jsRequire('semantic-ui-react', 'Dropdown')
+#end
 extern class Dropdown extends ReactComponentOfProps<DropdownProps> {}
 
 typedef DropdownProps = {

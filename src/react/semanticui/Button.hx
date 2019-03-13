@@ -6,7 +6,9 @@ import tink.domspec.Attributes;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
-@:jsRequire('semantic-ui-react', 'Button')
+#if react_global @:native('semanticUIReact.Button')
+#else @:jsRequire('semantic-ui-react', 'Button')
+#end
 extern class Button extends ReactComponentOfProps<ButtonProps> {}
 
 typedef ButtonProps = {

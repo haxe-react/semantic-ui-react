@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import haxe.extern.EitherType;
 
-@:jsRequire('semantic-ui-react', 'Grid')
+#if react_global @:native('semanticUIReact.Grid')
+#else @:jsRequire('semantic-ui-react', 'Grid')
+#end
 extern class Grid extends ReactComponentOfProps<GridProps> {}
 
 typedef GridProps = {

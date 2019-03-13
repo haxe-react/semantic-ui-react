@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import haxe.extern.EitherType;
 
-@:jsRequire('semantic-ui-react', 'Header')
+#if react_global @:native('semanticUIReact.Header')
+#else @:jsRequire('semantic-ui-react', 'Header')
+#end
 extern class Header extends ReactComponentOfProps<HeaderProps> {}
 
 typedef HeaderProps = {

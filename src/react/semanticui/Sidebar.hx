@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import haxe.Constraints;
 
-@:jsRequire('semantic-ui-react', 'Sidebar')
+#if react_global @:native('semanticUIReact.Sidebar')
+#else @:jsRequire('semantic-ui-react', 'Sidebar')
+#end
 extern class Sidebar extends ReactComponentOfProps<SidebarProps> {}
 
 typedef SidebarProps = {

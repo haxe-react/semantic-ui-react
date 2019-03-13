@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import haxe.extern.EitherType;
 
-@:jsRequire('semantic-ui-react', 'Segment')
+#if react_global @:native('semanticUIReact.Segment')
+#else @:jsRequire('semantic-ui-react', 'Segment')
+#end
 extern class Segment extends ReactComponentOfProps<SegmentProps> {}
 
 typedef SegmentProps = {

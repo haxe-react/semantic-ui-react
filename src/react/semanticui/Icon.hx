@@ -4,7 +4,9 @@ import react.ReactComponent;
 import react.BaseProps;
 import haxe.extern.EitherType;
 
-@:jsRequire('semantic-ui-react', 'Icon')
+#if react_global @:native('semanticUIReact.Icon')
+#else @:jsRequire('semantic-ui-react', 'Icon')
+#end
 extern class Icon extends ReactComponentOfProps<IconProps> {}
 
 typedef IconProps = {

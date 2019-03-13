@@ -5,7 +5,9 @@ import react.BaseProps;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
-@:jsRequire('semantic-ui-react', 'Menu')
+#if react_global @:native('semanticUIReact.Menu')
+#else @:jsRequire('semantic-ui-react', 'Menu')
+#end
 extern class Menu extends ReactComponentOfProps<MenuProps> {}
 
 typedef MenuProps = {
