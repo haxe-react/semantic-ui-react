@@ -9,5 +9,5 @@ import react.BaseProps;
 extern class DropdownHeader extends ReactComponentOfProps<DropdownHeaderProps> {}
 
 typedef DropdownHeaderProps = {
-	
+	?content:String,
 }

@@ -12,4 +12,5 @@ typedef DropdownItemProps = {
 	?icon:String,
 	?text:String,
 	?description:String,
+	?onClick:SyntheticEvent->Dynamic->Void,
 }
