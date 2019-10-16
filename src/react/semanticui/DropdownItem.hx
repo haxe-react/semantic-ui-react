@@ -9,8 +9,11 @@ import react.BaseProps;
 extern class DropdownItem extends ReactComponentOfProps<DropdownItemProps> {}
 
 typedef DropdownItemProps = {
+	> BasePropsWithOptChildren,
+	> BaseSemanticProps,
 	?icon:String,
 	?text:String,
 	?description:String,
+	?disabled:Bool,
 	?onClick:SyntheticEvent->Dynamic->Void,
 }

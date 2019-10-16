@@ -10,4 +10,9 @@ extern class DropdownMenu extends ReactComponentOfProps<DropdownMenuProps> {}
 
 typedef DropdownMenuProps = {
 	> BasePropsWithOptChildren,
+	> BaseSemanticProps,
+	
+	?direction:String,
+	?open:Bool,
+	?scrolling:Bool,
 }
