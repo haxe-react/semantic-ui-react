@@ -9,5 +9,8 @@ import react.BaseProps;
 extern class DropdownHeader extends ReactComponentOfProps<DropdownHeaderProps> {}
 
 typedef DropdownHeaderProps = {
+	> BasePropsWithOptChildren,
+	> BaseSemanticProps,
+	?icon:String,
 	?content:String,
 }
