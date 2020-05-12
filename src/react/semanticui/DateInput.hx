@@ -6,7 +6,7 @@ import react.semanticui.Input;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
-#if react_global @:native('window["semantic-ui-calendar-react"].DateInput')
+#if react_global @:native('SemanticUiCalendarReact.DateInput')
 #else @:jsRequire('semantic-ui-calendar-react', 'DateInput')
 #end
 extern class DateInput extends ReactComponentOfProps<DateInputProps> {}
