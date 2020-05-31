@@ -37,7 +37,7 @@ typedef ButtonProps = {
 	// ?onClick:Function,
 	?positive:Bool,
 	?primary:Bool,
-	?role:String,
+	// ?role:String,
 	?secondary:Bool,
 	?size:String,
 	?toggle:Bool,
