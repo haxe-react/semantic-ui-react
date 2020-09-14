@@ -9,9 +9,9 @@ import haxe.Constraints;
 #if react_global @:native('semanticUIReact.Dropdown')
 #else @:jsRequire('semantic-ui-react', 'Dropdown')
 #end
-extern class Dropdown extends ReactComponentOfProps<DropdownProps> {}
+extern class Dropdown<T> extends ReactComponentOfProps<DropdownProps<T>> {}
 
-typedef DropdownProps = {
+typedef DropdownProps<T> = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
 	?additionLabel:Dynamic,
@@ -46,7 +46,7 @@ typedef DropdownProps = {
 	?noResultsMessage:Dynamic,
 	?onAddItem:Function,
 	?onBlur:Function,
-	?onChange:SyntheticEvent->Dynamic->Void,
+	?onChange:SyntheticEvent->DropdownProps<T>->Void,
 	?onClick:Function,
 	?onClose:Function,
 	?onFocus:Function,
@@ -55,7 +55,7 @@ typedef DropdownProps = {
 	?onOpen:Function,
 	?onSearchChange:Function,
 	?open:Bool,
-	?options:Array<Dynamic>,
+	?options:Array<DropdownItemProps<T>>,
 	?placeholder:String,
 	?pointing:EitherType<Bool, String>,
 	?renderLabel:Function,
@@ -71,7 +71,7 @@ typedef DropdownProps = {
 	?text:String,
 	?trigger:Dynamic,
 	?upward:Bool,
-	?value:Dynamic,
+	?value:T,
 	?wrapSelection:Bool,
 }
 

@@ -6,9 +6,9 @@ import react.BaseProps;
 #if react_global @:native('semanticUIReact.Dropdown.Item')
 #else @:jsRequire('semantic-ui-react', 'Dropdown.Item')
 #end
-extern class DropdownItem extends ReactComponentOfProps<DropdownItemProps> {}
+extern class DropdownItem<T> extends ReactComponentOfProps<DropdownItemProps<T>> {}
 
-typedef DropdownItemProps = {
+typedef DropdownItemProps<T> = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
 	?icon:String,
@@ -16,4 +16,5 @@ typedef DropdownItemProps = {
 	?description:String,
 	?disabled:Bool,
 	?onClick:SyntheticEvent->Dynamic->Void,
+	?value:T,
 }
