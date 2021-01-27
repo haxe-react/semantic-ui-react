@@ -15,8 +15,20 @@ typedef CheckboxProps = {
 	> InputAttr,
 	> ReactEvents<js.html.InputElement>,
 	
-	?action:String,
 	?checked:Bool,
+	?defaultChecked:Bool,
+	?defaultIndeterminate:Bool,
+	?disabled:Bool,
+	?fitted:Bool,
+	// ?id{number|string}	
+	?indeterminate:Bool,
 	?label:String,
+	?name:String,
+	?radio:Bool,
+	?readOnly:Bool,
+	?slider:Bool,
+	// ?tabIndex{number|string}	
+	?toggle:Bool,
+	?type:String,
 }
 
