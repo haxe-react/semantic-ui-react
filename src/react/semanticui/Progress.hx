@@ -13,7 +13,7 @@ extern class Progress extends ReactComponentOfProps<ProgressProps> {}
 typedef ProgressProps = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
-	?active:String,
+	?active:Bool,
 	?attached:String,
 	?autoSuccess:Bool,
 	?color:String,
