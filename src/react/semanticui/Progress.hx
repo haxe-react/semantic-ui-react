@@ -20,6 +20,7 @@ typedef ProgressProps = {
 	?disabled:Bool,
 	?indicating:Bool,
 	?inverted:Bool,
+	?progress:Bool,
 	?percent:Float,
 	?size:String,
 	?success:Bool,
