@@ -12,6 +12,7 @@ typedef DropdownItemProps<T> = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
 	?icon:String,
+	?flag:String,
 	?text:String,
 	?description:String,
 	?disabled:Bool,
