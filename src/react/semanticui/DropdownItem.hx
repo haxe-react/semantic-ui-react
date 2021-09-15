@@ -11,6 +11,7 @@ extern class DropdownItem<T> extends ReactComponentOfProps<DropdownItemProps<T>>
 typedef DropdownItemProps<T> = {
 	> BasePropsWithOptChildren,
 	> BaseSemanticProps,
+	?key:String,
 	?icon:String,
 	?flag:String,
 	?text:String,
