@@ -60,7 +60,7 @@ typedef DropdownProps<T> = {
 	?pointing:EitherType<Bool, String>,
 	?renderLabel:Function,
 	?scrolling:Bool,
-	?search:EitherType<Bool, Function>,
+	?search:EitherType<Bool, (Array<DropdownItemProps<T>>, String)->Array<DropdownItemProps<T>>>,
 	?searchInput:Dynamic,
 	?searchQuery:String,
 	?selectOnBlur:Bool,
