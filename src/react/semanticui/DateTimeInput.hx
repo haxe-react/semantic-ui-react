@@ -15,6 +15,7 @@ extern class DateTimeInput extends ReactComponentOfProps<DateTimeInputProps> {}
 typedef DateTimeInputProps = {
 	> InputProps,
 	
+	?className:String,
 	?dateTimeFormat:String,
 	?dateFormat:String,
 	?timeFormat:String,
