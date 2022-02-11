@@ -14,6 +14,7 @@ extern class DateInput extends ReactComponentOfProps<DateInputProps> {}
 typedef DateInputProps = {
 	> InputProps,
 	
+	?className:String,
 	?dateFormat:String,
 	?popupPosition:String,
 	// ?inline:Bool,
